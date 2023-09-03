@@ -40,6 +40,33 @@ user_input = str(input("> "))
     elif user_input == "STOP":
         print(stop_txt)
 ```
+# Tipps and Tricks / Troubleshooting
+
+**IndentationError = Wrong Formated Code**
+
+**Example** result has not the same indentation as the def
+
+``` 
+# Inconsistent indentation in your code blocks will raise an error.
+>>> def add_three_numbers_misformatted(number_one, number_two, number_three):
+...     result = number_one + number_two + number_three   # This was indented by 4 spaces.
+...    print(result)     #this was only indented by 3 spaces
+```
+**Docstrings**
+
+```
+# An example from PEP257 of a multi-line docstring.         # A Command
+def complex(real=0.0, imag=0.0):
+    """Form a complex number.                               # A Docstring
+
+    Keyword arguments:
+    real -- the real part (default 0.0)
+    imag -- the imaginary part (default 0.0)
+    """                                                     # A Docstring
+
+    if imag == 0.0 and real == 0.0:
+        return complex_zero
+```
 
 # Convert Value
 
@@ -63,6 +90,13 @@ sum = str(first_nr + second_nr)                         # Convert the sum to a s
 print("Sum: " + sum)                                    # Print the sum
 ```
 
+**Example:** Check the class Type of a Variable  type()
+
+```
+>>> print(type(my_first_variable))
+<class 'int'>
+```
+
 # Functions
 
 **A function is a block of code which only runs when it is called.**
@@ -76,6 +110,19 @@ def greet(name):                        # def = define a function
 result = greet("Alice")                 # Call the function with a value "Alice"
 print(result)  # Output: Hello, Alice!  # Print the result
 ```
+
+**Example:** A function that prints the sum of two numbers
+
+```
+# The body of a function is indented by 2 spaces, & prints the sum of the numbers.
+def add_two_numbers(number_one, number_two):
+  total = number_one + number_two
+  print(total) 
+
+>>> add_two_numbers(3, 4)       # add_two_numbers is called with the arguments 3 and 4.
+7
+```
+
 
 # Modules / Methods
 
@@ -188,6 +235,7 @@ print("x after using -=:", x)
 >   # Greater Than
 <   # Less Than
 >=  # Greater Than or Equal To
+<=  # Smaller Than or Equal To
 ```
 
 **Example:** Simple Boolean Expression asking: is 10 bigger than 3
@@ -271,6 +319,18 @@ else:
     print(f'Both is not enough')
 ```
 
+**Example:** Atomar Example
+```
+    ration = (temperature * neutrons_produced_per_second)/threshold
+    
+    if ration <= 0.9:
+        return 'LOW'
+    elif ration <= 1.1:
+        return 'NORMAL'
+    else:
+        return 'DANGER'
+```
+
 
 # While Loops
 
@@ -345,11 +405,73 @@ numbers = [1,2,3,4,5,]      # List of numbers
 numbers.append(6)           # Adds 6 to the list
 numbers.insert(0, 10 )      # inserts 10 into the first position
 numbers.remove(2)           # Removes the number 2
+numbers.pop()               # Removes the last number in the list
+numbers.index(5)            # Shows the index of number 5
+
+word[-4]                    # Shows the 4th letter from the end
+word[:-4]                   # Removes the last 4 letters
+
+return removed if removed[-1] != 'i' else removed[:-1] + 'y'
+                            # Removes the last letter if its not an i and adds a y
 
 print(10 in numbers)        # Shows it there is a 10 true or false
-print(len(numbers))         # Shows how many numbers
+print(len(numbers))         # Shows how many numbers there are in the list
 numbers.clear()             # clears all the Numbers
 ```	
+
+**Example:** Join and Split
+```
+chickens = ["hen", "egg", "rooster"]
+' '.join(chickens)                  #joins the list chicken with a Space: # hen egg rooster
+' :: '.join(chickens)               #joins the list chicken with a Space::  #hen :: egg :: rooster
+
+
+colors = """red,                    # List of colors in a string
+orange,
+green,
+purple,
+yellow"""
+
+colors.split(',\n')                # splits the color list with the delimeter ,\n into a list
+                                   #['red', 'orange', 'green', 'purple', 'yellow']
+
+
+# Strings Methods
+
+
+```
+
+**Example:** Index
+```
+creative = '창의적인'
+>>> creative[0]             # '창'
+
+moon_and_stars = '🌟🌟🌙🌟🌟⭐'
+sun_and_moon = '🌞🌙🌞🌙🌞🌙🌞🌙🌞'
+
+>>> moon_and_stars[1:4]
+'🌟🌙🌟'
+
+>>> moon_and_stars[:3]
+'🌟🌟🌙'
+
+>>> moon_and_stars[3:]
+'🌟🌟⭐'
+```
+
+```
+cat_ipsum = "Destroy house in 5 seconds mock the hooman."
+cat_ipsum.split(delimeter)            # Split the string into a list of strings
+```
+
+**Example:** Format a String
+```
+def make_word_groups(vocab_words):
+    prefix = vocab_words[0]  # Extract the prefix from the list
+    words = vocab_words[1:] # take the last words from the list
+
+    return f' :: {prefix}'.join(vocab_words)
+```
 
 # For Loops
 
