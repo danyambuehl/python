@@ -1,3 +1,11 @@
+# Questions
+
+When is it len(numbers)
+and when is it numbers.()
+
+when using ==
+when do i use "is"
+
 # How to Write Code 
 
 **1. It should read like a Story**
@@ -167,18 +175,28 @@ print(Find)                  # 5
 
 ```
 numbers = [5,2,1,7,4]
+other_numbers = [10,9,6]
 numbers.append(20)                      # Inseret number in the End
 numbers.insert(1,22)                    # Insert number in index 1
-numbers.remove(1)                       # Remove number 4
+numbers.extend([8, 9])                  # Add a list of numbers to the list
+number.extend([other_numbers])          # Add a list of numbers to the list
+numbers.remove(4)                       # Remove number 4
 #numbers.clear()                        # Removes all numbers
-numbers.pop()                           # Removes last number in the list
+numbers.pop()                           # Removes last number in the list and returns it
+numbers.pop(0)                          # Removes the first number in the list and returns it 
+numbers.reverse()                       # Reverses the list
+numbers.sort()                          # Sorts the list
+numbers.sort(reverse=True)              # Sorts the list in reverse
+numbers.count(5)                        # Counts how many 5s there are
+numbers.index(5)                        # Shows the index of number 5  # 0
+sorted(numbers)                         # Function who returns a sorted copy and keeps the original
 print(numbers)
 
 print(numbers.index(2))                 # Shows the index of number 2
 print(2 in numbers)                     # Shows a Boolean Value True or False
 print(numbers.count(5))                 # Counts how many 5s there are
 print(numbers.sort())                   # Sorts the list (does not show value)
-numbers.sort()
+numbers.sort()                          # Sorts the list
 
 print(numbers)                          # Now its prints the sorted list
 numbers2 = numbers.copy()               # Copy the list into a new one
@@ -381,10 +399,14 @@ while True:
 
 **A List is a data structure to store a collection of values.**
 
+> A list can be declared as a literal with square [] brackets and commas between elements:
+
 **Example:** A List with 5 Numbers
 ```
 numbers = [1, 2, 3, 4, 5]   # List of numbers
 numbers.append(6)           # add 6 to the list
+print(names[2:4])               # shows the 3 -5
+sum(numbers)                    # will return the sum of all the numbers in the list
 ```
 
 **Example:** A List with 5 Strings
@@ -394,6 +416,7 @@ names[0] = 'Jan'                # Change the first name to Jan
 
 print(names[-1])                # Shows the last name in the list
 print(names[0:2])               # Shows the first 2 names in the list
+len(names)                      # Shows the lenght of the list # 3
 ```
 # List Methods 
 
@@ -422,10 +445,11 @@ numbers.clear()             # clears all the Numbers
 **Example:** Join and Split
 ```
 chickens = ["hen", "egg", "rooster"]
+
 ' '.join(chickens)                  #joins the list chicken with a Space: # hen egg rooster
 ' :: '.join(chickens)               #joins the list chicken with a Space::  #hen :: egg :: rooster
-
-
+```
+```
 colors = """red,                    # List of colors in a string
 orange,
 green,
@@ -434,43 +458,79 @@ yellow"""
 
 colors.split(',\n')                # splits the color list with the delimeter ,\n into a list
                                    #['red', 'orange', 'green', 'purple', 'yellow']
+```
 
+**Example:** Nested List's
+
+```
+# Each data structure is on its own line to help clarify what they are.
+nested_data_structures = [
+   {"fish": "gold", "monkey": "brown", "parrot": "grey"},
+   ("fish", "mammal", "bird"),
+   ['water', 'jungle', 'sky']
+]
+
+# [{'fish': 'gold', 'monkey': 'brown', 'parrot': 'grey'}, ('fish', 'mammal', 'bird'), ['water', 'jungle', 'sky']]
+```
+
+**Example:** List constructor 
+```
+multiple_elements_string = list("Timbuktu")
+
+multiple_elements_string
+['T', 'i', 'm', 'b', 'u', 'k', 't', 'u']
+```
 
 # Strings Methods
 
-
-```
-
 **Example:** Index
 ```
-creative = '창의적인'
->>> creative[0]             # '창'
+creative = 'ABCD'       # String of letters
+creative[0]             # Shows the first letter # A 
+creative[-1]            # Shows the last letter # D
 
 moon_and_stars = '🌟🌟🌙🌟🌟⭐'
-sun_and_moon = '🌞🌙🌞🌙🌞🌙🌞🌙🌞'
+moon_and_stars[1:4]     # Shows the second to the 4th letter # 🌟🌙🌟
+moon_and_stars[:3]      # Shows the first to the 3rd letter # 🌟🌟🌙
+moon_and_stars[3:]      # Shows the 3rd to the last letter # 🌟🌟⭐
 
->>> moon_and_stars[1:4]
-'🌟🌙🌟'
+string = cheerfulness   # String of letters
+string.endswith('ness') # Shows if the string ends with ness # True
+```
 
->>> moon_and_stars[:3]
-'🌟🌟🌙'
+**Example:** Removal / Replacement
+```
+'   ABCD   '.strip()                            # Removal of all whitespace from both ends of the str.
+#'ABCD'
 
->>> moon_and_stars[3:]
-'🌟🌟⭐'
+justification = 'https://unicode.org/emoji/'
+justification.strip('/stph:')                   # Removal of specified characters from both ends of the str.    
+#'unicode.org/emoji'
+
+clean = string.replace(' ','')                   # Removes all spaces 
+
+quote = "Just the place for a Snark!"
+quote.replace('Snark', '🐲')                    # replace Snark with a dragon
+#'Just the place for a 🐲!'
 ```
 
 ```
-cat_ipsum = "Destroy house in 5 seconds mock the hooman."
-cat_ipsum.split(delimeter)            # Split the string into a list of strings
+cat_ipsum = "Destroy house in 5 seconds mock the hooman."   # String of words
+cat_ipsum.split(delimeter)                                  # Split the string into a list of strings
+cat_ipsum.split(' ')                                        # (Desroy, house, in, 5, seconds, mock, the, hooman)
+title.title()                                               # Capitalize the first letter of each word
+
 ```
 
 **Example:** Format a String
 ```
-def make_word_groups(vocab_words):
-    prefix = vocab_words[0]  # Extract the prefix from the list
-    words = vocab_words[1:] # take the last words from the list
+vocab_words = ['auto', 'didactic', 'graph', 'mate', 'chrome', 'centric', 'complete']
 
-    return f' :: {prefix}'.join(vocab_words)
+def make_word_groups(vocab_words):
+    prefix = vocab_words[0]                     # Extract the first word of the list
+    words = vocab_words[1:]                     # Extract the rest of the list
+
+    return f' :: {prefix}'.join(vocab_words)    # Join the list with a :: and the prefix
 ```
 
 # For Loops
