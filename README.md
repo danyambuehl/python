@@ -86,6 +86,7 @@ float(Value)   # convert to float - floating point number
 bool(Value)    # convert to boolean - True or False
 str(Value)     # convert to string - text
 list(Value)    # convert to list - mutable sequence
+tuple(Value)   # convert to tuple - immutable sequence
 ```
 
 **Example:** Convert a string to a integer 
@@ -481,6 +482,18 @@ multiple_elements_string
 ['T', 'i', 'm', 'b', 'u', 'k', 't', 'u']
 ```
 
+**Example:** Work with Index of a List in a List
+```
+student_info = [["Charles", 90], ["Tony", 80], ["Alex", 100]]               # List of lists
+
+for student in student_info:        # For loop: for student_info list
+    if student[1] == 100:           # If loop: if student[Index] is 100 
+        return student              # return student
+return []
+
+print(perfect_score(student_info))
+```
+
 # Strings Methods
 
 **Example:** Index
@@ -562,6 +575,67 @@ i = 0
 while i < len(numbers):
     print (numbers [i])
     i += 1
+```
+
+**Example:** For loop with two variables enumerate()
+
+```
+word_list = ["bird", "chicken", "barrel", "apple"]
+
+# *index* and *word* are the loop variables.
+# Loop variables can be any valid python name.
+
+for index, word in enumerate(word_list):
+    if word.startswith("b"):
+        print(f"{word.title()} (at index {index}) starts with a B.")
+    else:
+        print(f"{word.title()} (at index {index}) doesn't start with a B.")
+
+#'Bird (at index 0) starts with a B.'
+#'Chicken (at index 1) doesn\'t start with a B.'
+```
+
+**Example:** The same method can be used as a "lookup" for pairing items between two lists.
+
+> Of course, if the lengths or indexes don't line up, this doesn't work.
+
+```
+word_list = ["cat", "chicken", "barrel", "apple", "spinach"]
+category_list = ["mammal", "bird", "thing", "fruit", "vegetable"]
+
+for index, word in enumerate(word_list):
+    print(f"{word.title()} is in category: {category_list[index]}.")
+
+#'Cat is in category: mammal.'
+#'Chicken is in category: bird.'
+```
+**Example:** How to Skipp with continue.
+
+```
+word_list = ["bird", "chicken", "barrel", "bongo", "sliver", "apple", "bear"]
+
+
+for index, word in enumerate(word_list):
+    if index == 0:
+        continue                                    # This will skip *bird*, at index 0
+    if word.startswith("b"):
+        print(f"{word.title()} (at index {index}) starts with a b.")
+
+#'Barrel (at index 2) starts with a b.'
+#'Bongo (at index 3) starts with a b.'
+```
+
+**Example:** How to Brake the loop.
+
+```
+word_list = ["bird", "chicken", "barrel", "bongo", "sliver", "apple"]
+
+for index, word in enumerate(word_list):
+    if word.startswith("b"):
+       print(f"{word.title()} (at index {index}) starts with a B.")
+    elif word == "sliver":
+       break
+ print("loop broken.")
 ```
 
 # Range Function
