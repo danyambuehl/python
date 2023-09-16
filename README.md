@@ -6,11 +6,12 @@ and when is it numbers.()
 when using ==
 when do i use "is"
 
-# How to Write Code 
+# How to Write Code
 
 **1. It should read like a Story**
 
-:smile:Good Code                  |            :cry:Bad Code: 
+:smile:Good Code                  |            :cry:Bad Code:
+
 ```
 guess_count = 0                           
 guess_limit = 3                         # i = 0 
@@ -48,18 +49,20 @@ user_input = str(input("> "))
     elif user_input == "STOP":
         print(stop_txt)
 ```
+
 # Tipps and Tricks / Troubleshooting
 
 **IndentationError = Wrong Formated Code**
 
 **Example** result has not the same indentation as the def
 
-``` 
+```
 # Inconsistent indentation in your code blocks will raise an error.
 >>> def add_three_numbers_misformatted(number_one, number_two, number_three):
 ...     result = number_one + number_two + number_three   # This was indented by 4 spaces.
 ...    print(result)     #this was only indented by 3 spaces
 ```
+
 **Docstrings**
 
 ```
@@ -89,7 +92,7 @@ list(Value)    # convert to list - mutable sequence
 tuple(Value)   # convert to tuple - immutable sequence
 ```
 
-**Example:** Convert a string to a integer 
+**Example:** Convert a string to a integer
 
 ```
 first_nr = float(input("Give me a first Number: "))     # Convert the input to a float
@@ -132,7 +135,6 @@ def add_two_numbers(number_one, number_two):
 7
 ```
 
-
 # Modules / Methods
 
 **Methods are functions associated with specific objects or classes, designed to operate on those objects' data and behavior.**
@@ -146,7 +148,6 @@ course.                     # To see all the methods of the class "String" you c
 course.upper()              # This method converts the string to uppercase.
 course.lower()              # This method converts the string to lowercase.
 ```
-
 
 **Example:** Upper Method
 
@@ -203,7 +204,6 @@ print(numbers)                          # Now its prints the sorted list
 numbers2 = numbers.copy()               # Copy the list into a new one
 ```
 
-
 # Find [Value] in String
 
 **Checks if the substring 'for' is present within the string 'Python for Beginners'.**
@@ -244,7 +244,7 @@ x *= 3      # Equivalent to: x = x * 3
 print("x after using -=:", x)  
 ```
 
-# Boolean Expressions -> True or False 
+# Boolean Expressions -> True or False
 
 **expressions that evaluate to either True or False**
 
@@ -258,13 +258,13 @@ print("x after using -=:", x)
 ```
 
 **Example:** Simple Boolean Expression asking: is 10 bigger than 3
+
 ```
 x = 10
 y = 5
 
 print(x < y)        # False
 ```
-
 
 # Logical Operators -> True or False Result
 
@@ -277,6 +277,7 @@ not         # True if the opposite is True
 ```
 
 **Example:** Using Logical Operators and, or, not
+
 ```
 price = 15
 
@@ -301,6 +302,7 @@ else        # if all conditions are False, the code below will be executed
 ```
 
 **Example** If Statements with 3 Conditions
+
 ```
 temperature = 5
 
@@ -318,6 +320,7 @@ print('done')
 ```
 
 **Example:** If Statements with Boolean Expressions
+
 ```
 has_high_income = True
 has_high_credit = False
@@ -339,6 +342,7 @@ else:
 ```
 
 **Example:** Atomar Example
+
 ```
     ration = (temperature * neutrons_produced_per_second)/threshold
     
@@ -350,12 +354,11 @@ else:
         return 'DANGER'
 ```
 
-
 # While Loops
 
 **A While loop will go through and do some task until a condition is met.**
 
-**Example:** While i is smaller than 15 do print "*" multiplied with i and add 1 to i 
+**Example:** While i is smaller than 15 do print "*" multiplied with i and add 1 to i
 
 ```
 i = 1
@@ -365,8 +368,8 @@ while i <= 15:          # While i is smaller than 15
 print('finish')         # Print finish when the loop is done
 ```
 
-
 Example 2 While **True** do following until **break**
+
 ```
 while True:
     user_input = str(input("> ")).upper()
@@ -382,13 +385,11 @@ while True:
         print("I don't understand that...")
 ```
 
-
 # Break -> Breaks the Loop
 
 **The break command can exit a while loop**
 
 **Example:** Break the loop when the user guess right
-
 
 ```
     if guess_number == secret_number:
@@ -403,6 +404,7 @@ while True:
 > A list can be declared as a literal with square [] brackets and commas between elements:
 
 **Example:** A List with 5 Numbers
+
 ```
 numbers = [1, 2, 3, 4, 5]   # List of numbers
 numbers.append(6)           # add 6 to the list
@@ -411,6 +413,7 @@ sum(numbers)                    # will return the sum of all the numbers in the 
 ```
 
 **Example:** A List with 5 Strings
+
 ```
 names = ['John', 'Bob', 'Mosh'] # List of names
 names[0] = 'Jan'                # Change the first name to Jan
@@ -419,11 +422,13 @@ print(names[-1])                # Shows the last name in the list
 print(names[0:2])               # Shows the first 2 names in the list
 len(names)                      # Shows the lenght of the list # 3
 ```
-# List Methods 
+
+# List Methods
 
 **A Method is a function that belongs to an object**
 
 **Example:** Lists are always in [] not in () would be a tupple
+
 ```
 numbers = [1,2,3,4,5,]      # List of numbers
 numbers.append(6)           # Adds 6 to the list
@@ -441,15 +446,17 @@ return removed if removed[-1] != 'i' else removed[:-1] + 'y'
 print(10 in numbers)        # Shows it there is a 10 true or false
 print(len(numbers))         # Shows how many numbers there are in the list
 numbers.clear()             # clears all the Numbers
-```	
+``` 
 
 **Example:** Join and Split
+
 ```
 chickens = ["hen", "egg", "rooster"]
 
 ' '.join(chickens)                  #joins the list chicken with a Space: # hen egg rooster
 ' :: '.join(chickens)               #joins the list chicken with a Space::  #hen :: egg :: rooster
 ```
+
 ```
 colors = """red,                    # List of colors in a string
 orange,
@@ -474,7 +481,8 @@ nested_data_structures = [
 # [{'fish': 'gold', 'monkey': 'brown', 'parrot': 'grey'}, ('fish', 'mammal', 'bird'), ['water', 'jungle', 'sky']]
 ```
 
-**Example:** List constructor 
+**Example:** List constructor
+
 ```
 multiple_elements_string = list("Timbuktu")
 
@@ -483,6 +491,7 @@ multiple_elements_string
 ```
 
 **Example:** Work with Index of a List in a List
+
 ```
 student_info = [["Charles", 90], ["Tony", 80], ["Alex", 100]]               # List of lists
 
@@ -497,6 +506,7 @@ print(perfect_score(student_info))
 # Strings Methods
 
 **Example:** Index
+
 ```
 creative = 'ABCD'       # String of letters
 creative[0]             # Shows the first letter # A 
@@ -512,6 +522,7 @@ string.endswith('ness') # Shows if the string ends with ness # True
 ```
 
 **Example:** Removal / Replacement
+
 ```
 '   ABCD   '.strip()                            # Removal of all whitespace from both ends of the str.
 #'ABCD'
@@ -536,6 +547,7 @@ title.title()                                               # Capitalize the fir
 ```
 
 **Example:** Format a String
+
 ```
 vocab_words = ['auto', 'didactic', 'graph', 'mate', 'chrome', 'centric', 'complete']
 
@@ -553,6 +565,7 @@ def make_word_groups(vocab_words):
 > for item in list -> item will be set to a Value of the list and change it every time it runs
 
 **Example:** Simple For loop with a list
+
 ```
 price = [10, 20, 30]            # List of prices
 total = 0                       # Variable for the total
@@ -565,6 +578,7 @@ print(f"Total: {total}")        # Total: 60
 ```
 
 **Example:** compare **for** and **while loop**
+
 ```
 numbers = [1,2,3,4,5,6]
 for item in numbers:
@@ -609,6 +623,7 @@ for index, word in enumerate(word_list):
 #'Cat is in category: mammal.'
 #'Chicken is in category: bird.'
 ```
+
 **Example:** How to Skipp with continue.
 
 ```
@@ -643,6 +658,7 @@ for index, word in enumerate(word_list):
 **Range is a function that generates a sequence of numbers**
 
 **Example:** Create a list with the range function
+
 ```
 for number in range(10):        # Starts with 0 and ends with 9
     print(number)
@@ -657,6 +673,7 @@ for number in range(1,100):     # Starts with 1 and ends with 100
 **Tuples are immutable lists this means can not be changed -> with () instead of []**
 
 **Example:** a Tuple
+
 ```
 numbers = (1,2,3)
 
@@ -682,9 +699,9 @@ print(name[1:-1])           # starts from 1 until the last one
 
 # Formatted Strings
 
-**Example:**  Formatted Strings with f'{}' and .format() 
+**Example:**  Formatted Strings with f'{}' and .format()
 
-> f'{Variable}' is the way to format strings 
+> f'{Variable}' is the way to format strings
 
 ```
 first = 'Dany'
@@ -710,6 +727,7 @@ thx '''
 **You can import a module, like here the math module "import math"**
 
 **Example:** How to use the math module
+
 ```
 # Import the math module
 import math             # Google : python 3 math module to find all functionality of the module
@@ -726,6 +744,7 @@ print(rounded)
 # Nested Loops
 
 **Example:** A For loop in a For loop prints every value of the matrix
+
 ```
 matrix = [
     [1,2,3],    # RAW 0
@@ -739,11 +758,13 @@ for row in matrix:             # For every row in the matrix
     for value in row:          # For every value in the row 
         print(value)           # Print the value
 ```
+
 # Matrix
 
 **Matrix is typically represented as a two-dimensional array or list of lists**
 
 **Example:** Of a Matrix with 3 RAWs and 3 NRs
+
 ```
 matrix = [
     [1,2,3],    # RAW 0
@@ -757,11 +778,11 @@ matrix[2]               # Access the RAW 2, 4,5,6
 
 ```
 
-# Unpacking 
+# Unpacking
 
 **Store every value of the list in a separate Variable**
 
-```	
+``` 
 coordinates = (1,2,3)
 x = coordinates[0]      # We can store every value of the list in a Variable to work with it afterwards.
 y = coordinates[1]
@@ -772,7 +793,7 @@ x,y,z = coordinates     # "Unpack" the coordinates into this 3 variables
 
 # Dictionaries
 
-**A dictionary is a data structure that stores key-value pairs.** 
+**A dictionary is a data structure that stores key-value pairs.**
 It's like a list, but instead of indexes, you have keys that can be of any type. but not duplicate
 
 ```
@@ -810,6 +831,7 @@ print(costumer.get("spitzname", "kein Spitzname"))
 ```
 
 **Example:** Script to convert numbers into words with for loop and dictionary
+
 ```
 numbers= {
     "0" : "Zero",
@@ -839,8 +861,8 @@ print(private)
 
 > JSON is a syntax for storing and exchanging data.
 
-
 **Example:** JSON String
+
 ```
 import json
 
@@ -853,3 +875,117 @@ y = json.loads(x)
 # the result is a Python dictionary:
 print(y["age"])
 ```
+
+# Multiple assignment
+
+> The Number of Variables and the Number of Values have to be the same
+
+```
+a, b = 1, 'Hello''         # a = 1 and b = 'Hello'
+print(a)            # 1
+print(b)            # Hello
+x, y, z = 1, 2      # ValueError: too many values to unpack (expected 3, got 2)
+```
+
+# Unpacking list/tuple/dictionary into variables
+
+>
+
+**Example:** Unpacking a list into variables
+
+```
+fruits = ["apple", "banana", "cherry"]          # List of fruits
+x, y, z = fruits                                # Unpack the list into variables   
+x                                               # apple
+y                                               # banana
+```
+
+**Example:** Not all variables have to be used
+
+```
+fruits = ["apple", "banana", "cherry"]          # List of fruits
+_, _, z = fruits                                # Unpack the list into variables and ignore the first 2
+z                                               # "cherry"
+```
+
+**Example:** Deep unpacking
+
+```
+fruits_vegetables = [["apple", "banana"], ["carrot", "potato"]]         # Two Lists one with fruits and one vegetables
+[[a, b], [c, d]] = fruits_vegetables                                    # Unpack the two list into variables
+a                                                                       # "apple"
+d                                                                       # "potato"
+[a, [c, d]] = fruits_vegetables                                         # Unpack just a Portion of the list
+[a, *rest], [, d] = fruits_vegetables                                   # Unpack the first value into variable a and the rest into a new list named rest
+rest                                                                    # ["banana"]
+d                                                                       # "potato"
+```
+
+**Example:** Unpacking a list/tuple with *
+
+```
+fruits = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]      # List of fruits
+x, *last = fruits                                                               # Unpack the first value into variable x and the rest into a new list named last
+x                                                                               # "apple"
+last                                                                            # ["banana", "cherry", "orange", "kiwi", "melon", "mango"]
+
+x, *middle, y, z = fruits                                                       # Unpack the first value into variable x and the last value into variable y and the rest into a new list named middle
+middle                                                                          # ["banana", "cherry", "orange", "kiwi"]
+y                                                                               # "melon"
+```
+
+**Example:** Unpacking a dictionary into variables
+
+> So when unpacking a dict, you can only unpack the keys and not the values:
+> To unpack the values then you can use the values() method:                            # .values()
+> To unpack both the keys and the values then you can use the items() method:           # .items()
+
+```
+fruits_inventory = {"apple": 6, "banana": 2, "cherry": 3}               # Dictionary of fruits
+x, y, z = fruits_inventory                                              # Unpack the keys into variables
+x                                                                       # "apple"
+x, y, z = fruits_inventory.values()                                     # Unpack the values into variables
+x                                                                       # 6
+x, y, z = fruits_inventory.items()                                      # Unpack the keys and values into tubles variables
+x                                                                       # ("apple", 6)  a tuble
+
+```
+
+**Example:** Packing variables into a list/tuple/dictionary
+
+> Use * to Pack all Variable into a list/tuple.
+
+```
+fruits = ("apple", "banana", "cherry")                              # Tuple of fruits
+more_fruits = ["orange", "kiwi", "melon", "mango"]                  # List of fruits
+combined_fruits = *fruits, *more_fruits                             # Unpack the one Tuble and one List and than Pack into one new TUBLE      # ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
+*combined_fruits_too, = *fruits, *more_fruits                       # Unpack the one Tuble and one List and than Pack into one new LIST       # ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+```
+
+**Example:** Packing a dictionary with **
+
+> Use ** to pack all key-value pairs from one dictionary into another dictionary, or combine two dictionaries together
+
+```
+fruits_inventory = {"apple": 6, "banana": 2, "cherry": 3}                       # Dictionary of fruits
+more_fruits_inventory = {"orange": 4, "kiwi": 1, "melon": 2, "mango": 3}        # Dictionary of fruits
+combined_fruits_inventory = {**fruits_inventory, **more_fruits_inventory}       # Unpack the one Dictionary and one Dictionary and than Pack into one new Dictionary
+```
+
+**Example:** Packing *args or **kwargs
+
+> Use *args to pack all positional arguments into a tuple
+
+```
+def my_function(*args):                         # *args is a **tuple**
+    print(args)
+
+my_function(1, 2, 3)                            # (1, 2, 3)
+my_function(1, 2, 3, "Hello", "Mars")           # (1, 2, 3, "Hello", "Mars")
+
+def my_function(**kwargs):                      # **kwargs is a **dictionary**
+    print(kwargs)
+
+my_function(a=1, b=2, c=3)                  # {"a": 1, "b": 2, "c": 3}
+```
+
