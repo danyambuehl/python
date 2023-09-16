@@ -90,7 +90,7 @@ set.update(["orange", "mango", "grapes"])     # Add multiple values to set      
 set.remove("banana")                          # Remove value from set                       # {1, 2, 3, 'orange', 'mango', 'grapes'}           # If value does not exist, remove() will raise an error
 set.discard("banana")                         # Remove value from set                       # {1, 2, 3, 'orange', 'mango', 'grapes'}           # If value does not exist, discard() will NOT raise an error
 set.pop()                                     # Remove random value from set                # {2, 3, 'orange', 'mango', 'grapes'}
-set3 = set.union(set2) # set3 = set | set2    # Return a set containing the union of sets   # {1, 2, 3, 'banana', 'orange', 'mango', 'grapes', 'apple', 'cherry'}       
+set.union(set2)         # set3 = set | set2   # Return a set containing the union of sets   # {1, 2, 3, 'banana', 'orange', 'mango', 'grapes', 'apple', 'cherry'}       
 set.intersection(set2)                        # contains the items that exist in both set   # {1, 2,}
 set.difference(set2)                          # contains the items that only exist in set   # {3, 'banana'}
 set.isdisjoint(set2)                          # Return True if no items in set is present in set2
