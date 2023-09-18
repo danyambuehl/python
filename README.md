@@ -881,10 +881,10 @@ print(y["age"])
 > The Number of Variables and the Number of Values have to be the same
 
 ```
-a, b = 1, 'Hello''         # a = 1 and b = 'Hello'
-print(a)            # 1
-print(b)            # Hello
-x, y, z = 1, 2      # ValueError: too many values to unpack (expected 3, got 2)
+a, b = 1, 'Hello''          # a = 1 and b = 'Hello'
+print(a)                    # 1
+print(b)                    # Hello
+x, y, z = 1, 2          # ValueError: too many values to unpack (expected 3, got 2)
 ```
 
 # Unpacking list/tuple/dictionary into variables
@@ -983,9 +983,47 @@ def my_function(*args):                         # *args is a **tuple**
 my_function(1, 2, 3)                            # (1, 2, 3)
 my_function(1, 2, 3, "Hello", "Mars")           # (1, 2, 3, "Hello", "Mars")
 
+def my_function(a, b, *args):                   # Define a and b and than pack the rest into args
+    print(a)
+    print(b)
+    print(args)
+
+my_function(1, 2, 3, 4, 5)                      # 1
+                                                # 2
+                                                # (3, 4, 5)
+```
+
+```
 def my_function(**kwargs):                      # **kwargs is a **dictionary**
     print(kwargs)
 
 my_function(a=1, b=2, c=3)                  # {"a": 1, "b": 2, "c": 3}
 ```
 
+
+**Example:** upacking into function call
+
+> This is very useful for functions that don't accept an iterable:
+
+```
+def my_function(a, b, c):
+   print(c)
+   print(b)
+   print(a)
+
+my_list = [1, 2, 3]
+my_function(*my_list)                           # 3
+                                                # 2
+                                                # 1
+```
+
+**Example:** upacking with zip()
+
+> takes multiple iterables and returns a list of tuples with the values from each iterable grouped:
+
+```
+values = (['x', 'y', 'z'], [1, 2, 3], [True, False, True])          # List of lists
+a, *rest = zip(*values)                                             # Unpack the list of lists and than pack into a new list taking allways the first value of each list
+rest                                                                # [('y', 2, False), ('z', 3, True)]
+a                                                                   # ('x', 1, True)
+```

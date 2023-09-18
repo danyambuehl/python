@@ -5,7 +5,7 @@ Python Cheat Sheet
 
 | Type  | Brackets  | Example           | Description               | Methods                                               |   Notes                                               |
 | ----  | -------   | -------           | -----------               | -------                                               |   -----                                               |
-| int   |           | 1                 | Integer                   |                                                       |                                                       |  
+| int   |           | 1                 | Integer                   |                                                       |                                                  |  
 | float | .         | 1.0               | Floating point number     |                                                       |
 | str   | "" ''     | "Hello"           | String                    | .upper() .lower() .title() .replace                   |
 | bool  |           | True              | Boolean                   |
@@ -13,6 +13,19 @@ Python Cheat Sheet
 | tuple | ()        | (1, 2, 3)         | Immutable list of values  | .index() .count()                                     |
 | dict  | {}        | {"a": 1, "b": 2}  | key-value pairs           | .keys() .values() .items() .pop() .get()              | can not be changed but can be added or remove   Ture and 1 == Same  |
 | set   | {}        | {1, 2, 3}         | collection unique values  |
+
+
+Iterable = Wiederholbar -> An iterable is any Python object capable of returning its members one at a time, permitting it to be iterated over in a for-loop
+
+list, tuple, dict, set: construct a list, tuple, dictionary, or set, respectively, from the contents of an iterable
+sum: sum the contents of an iterable.
+sorted: return a list of the sorted contents of an interable
+any: returns True and ends the iteration immediately if bool(item) was True for any item in the iterable.
+all: returns True only if bool(item) was True for all items in the iterable.
+max: return the largest value in an iterable.
+min: return the smallest value in an iterable.
+
+
 
 
 ### Functions
